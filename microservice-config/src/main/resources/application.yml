@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/GabrielLevanoR/store-microservices
+          search-paths: config-data
+          username: glevanoalc@gmail.com
+          password: Gabriellevano78
+  security:
+    user: root
+    password: pass4u
