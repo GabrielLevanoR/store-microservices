@@ -1,0 +1,16 @@
+server:
+  port: 8099
+
+spring:
+  application:
+    name: msvc-eureka
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-register: false
+    server-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
