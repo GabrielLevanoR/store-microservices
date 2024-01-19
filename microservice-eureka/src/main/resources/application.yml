@@ -4,8 +4,14 @@ server:
 spring:
   application:
     name: msvc-eureka
+  cloud:
+    config:
+      uri: http://localhost:8888
+      username: root
+      password: pass4u
   config:
     import: optional:configserver:http://localhost:8888
+<<<<<<< HEAD
 eureka:
   instance:
     hostname: localhost
@@ -14,4 +20,6 @@ eureka:
     fetch-register: false
     server-url:
       defaultZone: http://localhost:${server.port}/eureka/
+=======
+>>>>>>> 6ba064b (test eureka)
 
