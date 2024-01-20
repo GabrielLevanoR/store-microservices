@@ -4,11 +4,14 @@ server:
 spring:
   application:
     name: msvc-eureka
+  config:
+    import: optional:configserver:http://localhost:8888
   cloud:
     config:
       uri: http://localhost:8888
       username: root
       password: pass4u
+<<<<<<< HEAD
   config:
     import: optional:configserver:http://localhost:8888
 <<<<<<< HEAD
@@ -23,3 +26,5 @@ eureka:
 =======
 >>>>>>> 6ba064b (test eureka)
 
+=======
+>>>>>>> 5d9ba05 (testing eureka)

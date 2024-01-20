@@ -1,4 +1,4 @@
-package com.micro.store.eureka;
+package com.micro.store.eureka.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
