@@ -3,3 +3,8 @@ spring:
     name: msvc-product
   config:
     import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      uri: http://localhost:8888
+      username: root
+      password: pass4u
