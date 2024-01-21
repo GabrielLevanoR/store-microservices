@@ -1,12 +1,18 @@
 package com.micro.store.shopping.Service;
 
+import com.micro.store.shopping.Client.CustomerClient;
+import com.micro.store.shopping.Client.ProductClient;
 import com.micro.store.shopping.Entity.Invoice;
+import com.micro.store.shopping.Entity.InvoiceItem;
+import com.micro.store.shopping.Model.Customer;
+import com.micro.store.shopping.Model.Product;
 import com.micro.store.shopping.Repository.InvoiceItemRepository;
 import com.micro.store.shopping.Repository.InvoiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class InvoiceServiceImpl implements InvoiceService {
@@ -36,7 +42,7 @@ public class InvoiceServiceImpl implements InvoiceService {
         invoice.setState("CREATED");
         invoiceDB = invoiceRepository.save(invoice);
         invoiceDB.getItems().forEach( invoiceItem -> {
-            productClient.updateStockProduct( invoiceItem.getProductId(), invoiceItem.getQuantity() * -1);
+            productClient.updateStock( invoiceItem.getProductId(), invoiceItem.getQuantity() * -1);
         });
 
         return invoiceDB;

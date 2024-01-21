@@ -1,6 +1,7 @@
 package com.micro.store.shopping.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.micro.store.shopping.Model.Customer;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.Data;
@@ -41,10 +42,10 @@ public class Invoice {
 
     private String state;
 
-    /**
-     * @Transient
-     * private Customer customer;
-     */
+
+    @Transient
+    private Customer customer;
+
 
     public Invoice(){
         items = new ArrayList<>();
