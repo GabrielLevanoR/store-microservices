@@ -39,6 +39,17 @@ spring:
       service-url:
         defaultZone: http://localhost::8761/eureka
 
+Feign:
+  hystrix:
+    enable: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 external:
   product: http://localhost:8090/api/products
   customer: http://localhost:9090/api/customers
+
