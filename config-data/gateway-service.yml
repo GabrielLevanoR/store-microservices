@@ -1,0 +1,33 @@
+server:
+  port: 9595
+  error:
+    include-message: always
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enable: true
+      routes:
+        - id: msvc-customer
+          uri: lb:/msvc-customer
+          predicates:
+            - Path=/api/customer/**
+        - id: msvc-product
+          uri: lb:/msvc-product
+          predicates:
+            - Path=/api/product/**
+        - id: msvc-shopping
+          uri: lb:/msvc-shopping
+          predicates:
+            - Path=/api/invoices/**
