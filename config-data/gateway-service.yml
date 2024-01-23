@@ -25,12 +25,12 @@ spring:
         - id: msvc-product
           uri: lb://msvc-product
           predicates:
-            - Path=/products/**
+            - Path=/api/products/**
           filters:
             - StripPrefix=1
         - id: msvc-shopping
           uri: lb://msvc-shopping
           predicates:
-            - Path=/invoices/**
+            - Path=/api/invoices/**
           filters:
             - StripPrefix=1
