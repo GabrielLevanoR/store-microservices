@@ -8,4 +8,7 @@ spring:
       uri: http://localhost:8888
       username: root
       password: pass4u
-
+  boot:
+    admin:
+      client:
+        url: http://localhost:9097

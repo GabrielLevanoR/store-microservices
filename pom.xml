@@ -24,6 +24,7 @@
     <module>service-product</module>
     <module>service-customer</module>
     <module>service-shopping</module>
+    <module>admin-panel</module>
   </modules>
 
   <properties>
