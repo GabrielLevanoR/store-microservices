@@ -15,16 +15,18 @@ spring:
     name: gateway-service
   cloud:
     gateway:
+      default-filters:
+        - PrefixPath=/api
       routes:
         - id: msvc-customer
           uri: lb://msvc-customer
           predicates:
-            - Path=/customers/**
+            - Path=/api/customers/**
         - id: msvc-product
           uri: lb://msvc-product
           predicates:
-            - Path=/products/**
+            - Path=/api/products/**
         - id: msvc-shopping
           uri: lb://msvc-shopping
           predicates:
-            - Path=/invoices/**
+            - Path=/api/invoices/**
