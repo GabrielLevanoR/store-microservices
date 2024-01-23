@@ -22,11 +22,11 @@ spring:
         - id: msvc-customer
           uri: lb://msvc-customer
           predicates:
-            - Path=/customer/**
+            - Path=/customers/**
         - id: msvc-product
           uri: lb://msvc-product
           predicates:
-            - Path=/product/**
+            - Path=/products/**
         - id: msvc-shopping
           uri: lb://msvc-shopping
           predicates:
