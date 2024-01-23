@@ -20,14 +20,14 @@ spring:
           enable: true
       routes:
         - id: msvc-customer
-          uri: lb:/msvc-customer
+          uri: lb://msvc-customer
           predicates:
             - Path=/api/customer/**
         - id: msvc-product
-          uri: lb:/msvc-product
+          uri: lb://msvc-product
           predicates:
             - Path=/api/product/**
         - id: msvc-shopping
-          uri: lb:/msvc-shopping
+          uri: lb://msvc-shopping
           predicates:
             - Path=/api/invoices/**
