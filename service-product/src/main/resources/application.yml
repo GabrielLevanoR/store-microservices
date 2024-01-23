@@ -50,4 +50,11 @@ spring:
       uri: http://localhost:8888
       username: root
       password: pass4u
+<<<<<<< HEAD
 >>>>>>> 13ddf96 (fix ame DB and SQL script)
+=======
+  boot:
+    admin:
+      client:
+        url: http://localhost:9097
+>>>>>>> cb82155 (Admin panel)

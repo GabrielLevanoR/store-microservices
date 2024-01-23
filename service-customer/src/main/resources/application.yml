@@ -50,5 +50,12 @@ spring:
       uri: http://localhost:8888
       username: root
       password: pass4u
+<<<<<<< HEAD
 
 >>>>>>> b1775f4 (Models and Clients implement Feign and CircuitBreaker)
+=======
+  boot:
+    admin:
+      client:
+        url: http://localhost:9097
+>>>>>>> cb82155 (Admin panel)

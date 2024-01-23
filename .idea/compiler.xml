@@ -7,16 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservice-gateway" />
-        <module name="microservice-eureka" />
+        <module name="admin-panel" />
         <module name="service-product" />
         <module name="microservice-config" />
         <module name="service-customer" />
         <module name="service-shopping" />
+        <module name="microservice-eureka" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin-panel" options="-parameters" />
       <module name="microservice-config" options="-parameters" />
       <module name="microservice-eureka" options="-parameters" />
       <module name="microservice-gateway" options="-parameters" />
