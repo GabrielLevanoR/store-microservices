@@ -15,8 +15,6 @@ spring:
     name: gateway-service
   cloud:
     gateway:
-      default-filters:
-        - PrefixPath=/api
       discovery:
         locator:
           enabled: true
