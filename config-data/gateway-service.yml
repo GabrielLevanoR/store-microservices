@@ -17,7 +17,7 @@ spring:
     gateway:
       discovery:
         locator:
-          enable: true
+          enabled: true
       routes:
         - id: msvc-customer
           uri: lb://msvc-customer
