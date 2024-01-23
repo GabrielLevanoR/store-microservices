@@ -15,19 +15,16 @@ spring:
     name: gateway-service
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
       routes:
         - id: msvc-customer
           uri: lb://msvc-customer
           predicates:
-            - Path=/customers/**
+            - Path=//customers/**
         - id: msvc-product
           uri: lb://msvc-product
           predicates:
-            - Path=/products/**
+            - Path=//products/**
         - id: msvc-shopping
           uri: lb://msvc-shopping
           predicates:
-            - Path=/invoices/**
+            - Path=//invoices/**
