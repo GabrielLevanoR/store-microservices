@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping(value = "/api/products")
+@RequestMapping(value = "/products")
 public class ProductController {
     @Autowired
     private ProductService productService;

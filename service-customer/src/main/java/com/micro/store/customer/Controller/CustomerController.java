@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "/api/customers")
+@RequestMapping(value = "/customers")
 public class CustomerController {
     @Autowired
     CustomerService customerService;
