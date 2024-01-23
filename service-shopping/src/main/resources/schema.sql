@@ -16,5 +16,5 @@ CREATE TABLE tbl_invoices (
     description VARCHAR(250) NOT NULL,
     customer_id BIGINT,
     create_at TIMESTAMP NOT NULL,
-    state VARCHAR(250) NOT NULL,
+    state VARCHAR(250) NOT NULL
 );
